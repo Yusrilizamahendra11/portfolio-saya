@@ -162,7 +162,7 @@ function App() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a 
-               href="/CV-Yusril-Mahendra.pdf" 
+               href="/CV-YUSRIL-IZA-MAHENDRA.pdf" 
                download
                className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 justify-center active:scale-95"
                >
