@@ -367,11 +367,14 @@ function App() {
               { skill: "Irrigation System Design", level: 88 },
               { skill: "Field Data Analysis", level: 92 },
               { skill: "Team Coordination", level: 87 },
-              { skill: "Field Survey", level: 94 }
+              { skill: "Field Survey", level: 94 },
+              { skill: "Graphic Design", level: 85 }
             ].map((item, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300">
                 <div className="flex justify-between items-center mb-4">
-                  <h3 className="font-semibold text-lg">{item.skill}</h3>
+                  <h3 className="font-semibold text-lg">
+                    {item.skill}
+                  </h3>
                   <span className="text-amber-500 font-bold">{item.level}%</span>
                 </div>
                 <div className="w-full bg-slate-700 rounded-full h-2">
@@ -399,46 +402,82 @@ function App() {
               {
                 title: "Irrigation Network Development",
                 description: "Comprehensive irrigation system design and implementation",
-                image: "https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: "https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg?auto=compress&cs=tinysrgb&w=600",
+                link: "[INSERT YOUR LINK HERE]"
               },
               {
                 title: "Land Survey & Mapping",
                 description: "Detailed topographical surveys and land mapping projects",
-                image: "https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: "https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=600",
+                link: "[INSERT YOUR LINK HERE]"
               },
               {
                 title: "Infrastructure Planning",
                 description: "Strategic infrastructure development and planning",
-                image: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: "https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg?auto=compress&cs=tinysrgb&w=600",
+                link: "[INSERT YOUR LINK HERE]"
               },
               {
                 title: "Field Data Collection",
                 description: "Comprehensive field surveys and data analysis",
-                image: "https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: "https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=600",
+                link: "[INSERT YOUR LINK HERE]"
               },
               {
                 title: "Project Supervision",
                 description: "On-site project management and quality control",
-                image: "https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: "https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=600",
+                link: "[INSERT YOUR LINK HERE]"
               },
               {
                 title: "Technical Consulting",
                 description: "Expert technical consultation and problem-solving",
-                image: "https://images.pexels.com/photos/1108717/pexels-photo-1108717.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: "https://images.pexels.com/photos/1108717/pexels-photo-1108717.jpeg?auto=compress&cs=tinysrgb&w=600",
+                link: "[INSERT YOUR LINK HERE]"
+              },
+              {
+                title: "Brand Identity Design",
+                description: "Creative logo and brand identity development",
+                image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
+                link: "[INSERT YOUR LINK HERE]"
+              },
+              {
+                title: "Digital Illustrations",
+                description: "Custom digital artwork and technical illustrations",
+                image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
+                link: "[INSERT YOUR LINK HERE]"
+              },
+              {
+                title: "Marketing Materials",
+                description: "Professional brochures, flyers, and promotional designs",
+                image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
+                link: "[INSERT YOUR LINK HERE]"
               }
             ].map((project, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+              <div 
+                key={index} 
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer"
+                onClick={() => window.open(project.link, '_blank')}
+              >
                 <div className="relative overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2">
+                      <Eye className="w-5 h-5 text-white" />
+                    </div>
+                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-3 text-slate-900">{project.title}</h3>
-                  <p className="text-slate-600">{project.description}</p>
+                  <p className="text-slate-600 mb-3">{project.description}</p>
+                  <div className="flex items-center text-blue-600 font-semibold text-sm">
+                    <span>View Project</span>
+                    <Eye className="w-4 h-4 ml-2" />
+                  </div>
                 </div>
               </div>
             ))}
@@ -506,7 +545,7 @@ function App() {
                     </div>
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-slate-600">yusrilizamahendra@gmail.com</p>
+                      <p className="text-slate-600">yusrilizamahendra11@gmail.com</p>
                     </div>
                   </div>
                   
