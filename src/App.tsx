@@ -1,4 +1,5 @@
 import profilePicture from './assets/yusril-iza-mahendra.jpg';
+import irrigationImage from './assets/yim.jpg';
 import React, { useState, useEffect } from 'react';
 import { 
   Menu, 
@@ -402,7 +403,7 @@ function App() {
               {
                 title: "Irrigation Network Development",
                 description: "Comprehensive irrigation system design and implementation",
-                image: "https://images.pexels.com/photos/1595108/pexels-photo-1595108.jpeg?auto=compress&cs=tinysrgb&w=600",
+                image: irrigationImage,
                 link: "[INSERT YOUR LINK HERE]"
               },
               {
@@ -447,12 +448,7 @@ function App() {
                 image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
                 link: "[INSERT YOUR LINK HERE]"
               },
-              {
-                title: "Marketing Materials",
-                description: "Professional brochures, flyers, and promotional designs",
-                image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
-                link: "[INSERT YOUR LINK HERE]"
-              }
+              
             ].map((project, index) => (
               <div 
                 key={index} 
